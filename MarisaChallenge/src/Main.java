@@ -5,7 +5,23 @@ public class Main {
 	}
 
 	public static int sumPrimes(int[] numbers) {
+		int sum = 0;
 
-		return 0;
+		for (int i = 0; i < numbers.length; i++) {
+			if (isPrime(numbers[i])) {
+				sum += numbers[i];
+			}
+		}
+
+		return sum;
+	}
+
+	public static boolean isPrime(int num) {
+		for (int i = 2; i < num; i++) {
+			if (num % i == 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 }
